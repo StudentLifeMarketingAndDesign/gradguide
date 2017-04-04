@@ -1,6 +1,9 @@
 <?php
 class GradGuideHomePage extends Page {
-
+	
+	public function getPageTypeTheme(){
+		return "dark-header";
+	}
 
 }
 
