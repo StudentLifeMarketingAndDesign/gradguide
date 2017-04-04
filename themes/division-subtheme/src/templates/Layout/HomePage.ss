@@ -1,0 +1,26 @@
+
+<div class="header__container header__container--dark header__container--overlay header__container--no-border header__container--gg-home">
+	<div class="header__gg-screen">
+		<% include DivisionBar %>
+		<% include HeaderGradGuideHomePage %>
+		<h1 class="header__gg-title">The <span>UI</span> Grad Guide</h1>
+
+		<div class="gg-event-slider">
+		<% with $LocalistCalendar %>
+			<% loop $EventList.Limit(6) %>
+
+				<div class="gg-event-slider__event" style="background-image: url($Image.URL);">
+					<a class="gg-event-slider__link" href="$Link">
+						
+					</a>
+
+				</div>
+			<% end_loop %>
+		<% end_with %>
+
+
+
+		</div>
+
+	</div>
+</div>
