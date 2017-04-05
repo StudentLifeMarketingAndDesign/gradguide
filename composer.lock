@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "14ed10114d56fd4198b92a6e6ec314ac",
-    "content-hash": "728e738090925ef184a4e01c076a27fd",
+    "hash": "693b5338cf54896e37d22c8c726b666b",
+    "content-hash": "b4c0fddbe3aced7ce87b7960c7cdb438",
     "packages": [
         {
             "name": "asyncphp/doorman",
@@ -915,13 +915,13 @@
             "version": "3.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/silverstripe/silverstripe-activedirectory.git",
-                "reference": "29c658736832ba4d76e74b8cf42be4600b6630c4"
+                "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory.git",
+                "reference": "8925ec8805715cbac1accf7e8759e5bdd02b36da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-activedirectory/zipball/29c658736832ba4d76e74b8cf42be4600b6630c4",
-                "reference": "29c658736832ba4d76e74b8cf42be4600b6630c4",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-activedirectory/zipball/8925ec8805715cbac1accf7e8759e5bdd02b36da",
+                "reference": "8925ec8805715cbac1accf7e8759e5bdd02b36da",
                 "shasum": ""
             },
             "require": {
@@ -942,7 +942,6 @@
                     "3.x-dev": "3.0.x-dev"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -958,15 +957,18 @@
             ],
             "description": "Adds Active Directory support to SilverStripe including user synchronisation and SSO/LDAP authentication",
             "keywords": [
-                "SSO",
                 "active",
                 "ad",
                 "directory",
                 "ldap",
                 "saml",
-                "silverstripe"
+                "silverstripe",
+                "sso"
             ],
-            "time": "2017-02-14 14:33:08"
+            "support": {
+                "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory/tree/3"
+            },
+            "time": "2017-02-22 15:45:41"
         },
         {
             "name": "silverstripe/blog",
