@@ -19,7 +19,6 @@ if (class_exists('SiteTree')) SiteTree::enable_nested_urls();
 
 if(Director::isLive()) {
 	Director::forceSSL();
-	Authenticator::set_default_authenticator('SAMLAuthenticator');
 }
 
-SS_Log::add_writer(new SS_LogEmailWriter('dustin-quam@uiowa.edu'), SS_Log::ERR);
+Authenticator::set_default_authenticator('SAMLAuthenticator');
