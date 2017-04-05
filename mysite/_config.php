@@ -22,3 +22,4 @@ if(Director::isLive()) {
 	Authenticator::set_default_authenticator('SAMLAuthenticator');
 }
 
+SS_Log::add_writer(new SS_LogEmailWriter('dustin-quam@uiowa.edu'), SS_Log::ERR);
