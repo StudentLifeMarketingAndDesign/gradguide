@@ -1,0 +1,6 @@
+BlogTag:
+  extensions:
+    - GgBlogTagExtension
+Topic:
+  extensions:
+    - TopicExtension

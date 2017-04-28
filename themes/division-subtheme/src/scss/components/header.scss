@@ -12,18 +12,23 @@
 }
 
 .header__gg-title{
-	font-size: rem-calc(128);
+	margin-top: rem-calc(0);
+	font-size: rem-calc(72);
 	text-align: center;
 	color: white;
 	animation: springish; 
 	animation-iteration-count: 1;
 	animation-duration: 2.38s;
 	animation-timing-function: cubic-bezier(0.445,  0.050, 0.550, 0.950);
+
 	span{
 		color: $yellow;
 		font-size: 0.6em;
 	}
-
+	@include breakpoint(large up) {
+		margin-top: rem-calc(30);
+		font-size: rem-calc(128);
+	}
 }
 
 .header__gg-screen{

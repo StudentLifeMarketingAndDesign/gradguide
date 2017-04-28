@@ -6,9 +6,16 @@ class LocationPage extends Page {
 
 	private static $has_one = array(
 
+		'Image' => 'Image'
+
 	);
 
 	private static $has_many = array(
+	);
+
+	private static $many_many = array(
+		'Tags' => 'BlogTag',
+		'Topics' => 'Topic'
 	);
 
 	private static $singular_name = 'Location';
@@ -21,6 +28,25 @@ class LocationPage extends Page {
 
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
+
+		$f->addFieldToTab('Root.Main', new UploadField('Image', 'Image'), 'Content');
+
+		$tagsField = TagField::create(
+						'Tags',
+						'Tags',
+						BlogTag::get(),
+						$this->Tags()
+					)->setShouldLazyLoad(true)->setCanCreate(false);
+
+		$topicsField = TagField::create(
+						'Topics',
+						'Relevant specific topics',
+						Topic::get(),
+						$this->Topics()
+					)->setShouldLazyLoad(true)->setCanCreate(false);
+
+		$f->addFieldToTab('Root.Main', $tagsField, 'Content');
+		$f->addFieldToTab('Root.Main', $topicsField, 'Content');
 		//$f->removeByName("Content");
 		//$gridFieldConfig = GridFieldConfig_RecordEditor::create();
 		//$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
