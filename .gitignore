@@ -64,3 +64,5 @@ queuedjobs/
 npm-debug.log
 addressable/
 fbpagefeed/
+nocaptcha
+nocaptcha.yml
