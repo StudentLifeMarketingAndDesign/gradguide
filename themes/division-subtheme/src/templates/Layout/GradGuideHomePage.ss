@@ -24,6 +24,7 @@
 
 <div class="gg-home-content__container" style="clear: both;">
 	<h2 class="text-center">You're here. Now what?</h2>
+	$BlockArea(AfterContent)
 <%-- 
 <p class="text-center"><a href="#" class="gg-tag">Places to go</a></p> --%>
 
