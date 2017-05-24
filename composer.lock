@@ -453,12 +453,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "b1686cd6d75c849a15df220abba685e2325ffd61"
+                "reference": "bde4b9a10d4141dc4ed0743853c0f92cbf985815"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/b1686cd6d75c849a15df220abba685e2325ffd61",
-                "reference": "b1686cd6d75c849a15df220abba685e2325ffd61",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/bde4b9a10d4141dc4ed0743853c0f92cbf985815",
+                "reference": "bde4b9a10d4141dc4ed0743853c0f92cbf985815",
                 "shasum": ""
             },
             "require": {
@@ -503,7 +503,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2.0.x-topicholder",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2017-05-23 19:45:42"
+            "time": "2017-05-24 03:40:36"
         },
         {
             "name": "md/rss-display",
