@@ -1,4 +1,5 @@
 @import "division";
+@include foundation-menu;
 @import "components/header";
 @import "components/tags";
-@import "components/gg-event-slider";
+@import "layouts/gg-homepage";
