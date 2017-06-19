@@ -3,8 +3,8 @@
 	<div class="header__gg-screen">
 		<% include DivisionBar %>
 		<% include HeaderGradGuideHomePage %>
-		<h1 class="header__gg-title">The <span>UI</span> Grad Guide</h1>
-		<%--<p class="text-center"><a href="#" class="gg-tag">Events &amp; Nightlife</a></p>
+		
+		<!-- <p class="text-center"><a href="#" class="gg-tag">Events &amp; Nightlife</a></p>
  		<div class="gg-event-slider__container">
 			<div class="gg-event-slider">
 				<% with $LocalistCalendar %>
@@ -16,7 +16,7 @@
 					<% end_loop %>
 				<% end_with %>
 			</div>
-		</div> --%>
+		</div> -->
 
 	</div>
 </div>
@@ -26,23 +26,50 @@
 <div class="row">
 
 	<div class="gg-home-content large-12 columns">
+		<h2 class="text-center gg-home-content__main-header">You're here. Now what?</h2>
 
 		<div class="row">
-			<div class="large-8 large-centered columns">
-				<h2 class="text-center">You're here. Now what?</h2>
+			<div class="large-8 large-offset-1 columns">
+				
 				$Content
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="row small-up-2 medium-up-3">
 				<% loop $Topics %>
-				<div class="column column-block">
-					<div class="gg-topiclist__item"><h3 class="gg-topiclist__heading"><a href="$Link">$Title</a></h3></div>
-				</div>
+					<div class="gg-topicpreview">
+						<a class="gg-topicpreview__link" href="$Link">
+							<div class="row">
+								<div class="medium-7 columns">
+									<h3>$Title</h3>
+									<div class="gg-topicpreview__content">
+										$Content.NoHTML.LimitCharacters(100)
+									</div>
+									<p><span class="keep-reading">Keep reading &rarr;</span></p>
+								</div>
+								<div class="medium-5 columns">
+									<% if $FeaturedImage %>
+										<img class="gg-topicpreview__image" src="$FeaturedImage.URL" alt="" role="presentation" />
+									<% end_if %>
+								</div>
+
+							</div>
+						</a>
+					</div>
 				<% end_loop %>
 			</div>
+			<div class="large-3 columns dp-sticky">
+			$BlockArea(Sidebar)
+			</div>
 		</div>
+
+
+<%-- 		<div class="row small-up-1 large-up-2">
+			<% loop $Topics %>
+			<div class="column column-block">
+				<div class="gg-topiclist__item">
+					<h3 class="gg-topiclist__heading"><a href="$Link">$Title</a></h3>
+					$Content
+				</div>
+			</div>
+			<% end_loop %>
+		</div> --%>
 		$BlockArea(AfterContent)
 
 	</div>

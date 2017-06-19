@@ -38,6 +38,8 @@
 				</nav>
 			</div>
 			<div class="nav__toggle nav__toggle--search show-for-small hide-for-medium">
-				<div class="nav__link nav__link--{$DarkLight}"><i class="fa fa-lg fa-search site-search-button" aria-hidden="true"></i></span>
+				<div class="nav__link nav__link--{$DarkLight}"><i class="fa fa-lg fa-search site-search-button" aria-hidden="true"></i>
+				</div>
 			</div>
-		</header>
+			<h1 class="header__gg-title">The <span>UI</span> Grad Guide</h1>
+</header>

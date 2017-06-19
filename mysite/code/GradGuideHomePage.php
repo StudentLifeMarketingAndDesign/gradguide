@@ -23,7 +23,7 @@ class GradGuideHomePage extends Page {
 	}
 
 	public function getTopics(){
-		echo 'hello';
+		//echo 'hello';
 		$topics = Topic::get()->sort('GgSortOrder');
 
 		return $topics;
