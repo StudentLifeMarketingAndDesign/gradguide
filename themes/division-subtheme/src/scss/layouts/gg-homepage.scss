@@ -4,18 +4,35 @@
 
 .header__container--gg-home{
 	background-color: none;
-	min-height: rem-calc(800);
+	
 	background-image: url(../images/ggheader.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
+	min-height: rem-calc(200);
+	@include breakpoint(large){
+
+		min-height: rem-calc(800);
+	}
 
 }
+.header--gg-home{
+	min-height: rem-calc(150);
 
+	@include breakpoint(medium){
+		min-height: rem-calc(400);
+	}
+	@include breakpoint(large){
+
+		min-height: rem-calc(800);
+	}
+}
 .header__gg-title{
 	margin-top: rem-calc(0);
-	font-size: rem-calc(72);
+	font-size: rem-calc(48);
 	text-align: center;
+	padding: 0 rem-calc(20);
+	line-height: 1;
 	color: white;
 	animation: springish; 
 	animation-iteration-count: 1;
@@ -26,7 +43,11 @@
 		color: $yellow;
 		font-size: 0.6em;
 	}
+	@include breakpoint(350) {
+		font-size: rem-calc(72);
+	}
 	@include breakpoint(large up) {
+		padding: 0;
 		margin: rem-calc(130);
 		font-size: rem-calc(152);
 	}
@@ -39,6 +60,12 @@
 	width: 100%;
 }
 
+.nav-collapse--gg-home{
+	display: none;
+	&.open{
+		display: block;
+	}
+}
 @keyframes springish {
   0.00% {transform: translate3d(100.00px, 0, 0) scale(0);}
   10.16% {transform: translate3d(-41.06px, 0, 0) scale(1.4106);}
@@ -55,7 +82,7 @@
 	position: relative;
 	z-index: 999;
 	background: white;
-
+	padding-top: rem-calc(30);
 	@include breakpoint(large up) {
 		margin-top: rem-calc(-200);
 		padding-top: rem-calc(60);

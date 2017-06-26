@@ -20,7 +20,9 @@
 
 	</div>
 </div>
-
+<div class="nav-collapse nav-collapse--gg-home">
+	<% include Navigation %>
+</div>
 <div class="gg-home-content__container" style="clear: both;">
 
 <div class="row">

@@ -1,4 +1,4 @@
-<header id="header" class="header header--dark-header" role="banner">
+<header id="header" class="header header--dark-header header--gg-home" role="banner">
 			<div class="nav__toggle nav__toggle--menu show-for-small hide-for-medium">
 				<div class="nav__link nav__link--{$DarkLight} nav__link--mobile-toggle" data-toggle="offCanvas"><span class="nav__menu-icon nav__menu-icon--{$DarkLight}" id="nav__menu-icon"></span><span class="nav__menu-text nav__menu-text--{$DarkLight}" id="nav__menu-text">Menu</span></div>
 			</div>
@@ -42,4 +42,5 @@
 				</div>
 			</div>
 			<h1 class="header__gg-title">The <span>UI</span> Grad Guide</h1>
+
 </header>
