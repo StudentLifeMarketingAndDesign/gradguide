@@ -11,6 +11,8 @@
 		<a href="$Link" class="bloglistitem__img border-effect">
 			<img class="dp-lazy" data-original="http://img.youtube.com/vi/$YoutubeBackgroundEmbed/sddefault.jpg" width="500" height="333"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="$Title">
 		</a>
+	<% else_if $Address %>
+		$AddressMap(500,333)
 	<% end_if %>
 	<div class="bloglistitem__content<% if $FeaturedImage || $BackgroundImage || $YoutubeBackgroundEmbed %>--wimage<% end_if %>">
 		<% if $Categories.exists %>
