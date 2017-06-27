@@ -1,5 +1,5 @@
 <?php
-class LocationHolderPage extends Page {
+class LocationHolderPage extends Blog {
 
 	private static $db = array(
 	);
@@ -16,7 +16,9 @@ class LocationHolderPage extends Page {
 	private static $plural_name = 'Location Holders';
 
 	private static $allowed_children = array('LocationPage');
-
+    public function getLumberjackTitle() {
+        return 'Locations';
+    }
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
 		//$f->removeByName("Content");
@@ -27,9 +29,13 @@ class LocationHolderPage extends Page {
 		$f->addFieldToTab("Root.Main", $gridField); // add the grid field to a tab in the CMS	*/
 		return $f;
 	}
+
+	public function RandomLocations(){
+		return LocationPage::get()->filter(array('ParentID' => $this->ID))->sort('RAND()');
+	}
 }
 
-class LocationHolderPage_Controller extends Page_Controller {
+class LocationHolderPage_Controller extends Blog_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the

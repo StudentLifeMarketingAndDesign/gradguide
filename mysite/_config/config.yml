@@ -4,3 +4,7 @@ BlogTag:
 Topic:
   extensions:
     - TopicExtension
+LocationPage:
+  extensions:
+    - Addressable
+    - Geocodable

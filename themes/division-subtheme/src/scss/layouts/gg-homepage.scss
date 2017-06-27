@@ -93,6 +93,9 @@
 }
 .gg-home-content__main-header{
 	font-size: rem-calc(48);
+	@include breakpoint(large){
+		font-size: rem-calc(64);
+	}
 	margin-top: 0;
 }
 // .gg-topiclist__item{
@@ -114,7 +117,7 @@
 	&__link{
 		color: #222;
 		display: block;
-		border: 2px solid #222; 
+		border: 2px solid #eee; 
 		padding: rem-calc(15);
 		margin: rem-calc(20) 0;
 	}
