@@ -71,6 +71,11 @@ class LocationPage extends BlogPost {
 		$f->addFieldToTab("Root.Main", $gridField); // add the grid field to a tab in the CMS	*/
 		return $f;
 	}
+    public function getAddressEncoded(){
+    	$address = $this->obj('Address')->getValue();
+
+    	return rawurlencode($address);
+    }
 	/**
 	 * Returns a static google map of the address, linking out to the address.
 	 *

@@ -41,7 +41,11 @@
 								<div class="medium-7 columns">
 									<h3>$Title</h3>
 									<div class="gg-topicpreview__content">
-										$Content.NoHTML.LimitCharacters(100)
+										<% if $Summary %>
+											$Summary.NoHTML.LimitCharacters(100)
+										<% else %>
+											$Content.NoHTML.LimitCharacters(100)
+										<% end_if %>
 									</div>
 									<p><span class="keep-reading">Keep reading &rarr;</span></p>
 								</div>
