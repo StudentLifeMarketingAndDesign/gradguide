@@ -6,7 +6,7 @@
 		);
 
 		private static $belongs_many_many = array (
-
+			'LocationPages' => 'LocationPage'
 		);
 		private static $has_one = array(
 			// "GradGuideHomePage" => "GradGuideHomePage",

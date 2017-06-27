@@ -15,7 +15,7 @@ class LocationPage extends BlogPost {
 
 	private static $many_many = array(
 		// 'Tags' => 'BlogTag',
-		// 'Topics' => 'Topic'
+		'Topics' => 'Topic'
 	);
 
 	private static $defaults = array(
