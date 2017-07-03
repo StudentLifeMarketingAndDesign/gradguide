@@ -59,7 +59,7 @@ $Header
           <% end_loop %>
           </ul>
         <% end_if %>
-        <% include TagsCategories %>
+       <%--  <% include TagsCategories %> --%>
 
       </div>
       
@@ -101,15 +101,3 @@ $Header
   </section>
 </div>
 <% end_if %>
- <div class="row">
-
-    <div class="main-content main-content--with-padding <% if $Children || $Menu(2) || $SidebarBlocks ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
-<h2>More topics:</h2>
-      <% with $TopicSearchForm %>
-            <% include TopicSearchForm %>
-          <% end_with %>
-      <% with $Parent %>
-      <% include TopicHolderAllTopics %>
-      <% end_with %>
-      </div>
-</div>

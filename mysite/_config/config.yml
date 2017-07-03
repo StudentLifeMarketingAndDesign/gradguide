@@ -4,6 +4,9 @@ BlogTag:
 Topic:
   extensions:
     - TopicExtension
+TopicHolder:
+  extensions:
+    - TopicHolderExtension
 LocationPage:
   extensions:
     - Addressable

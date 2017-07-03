@@ -8,6 +8,8 @@
 		private static $belongs_many_many = array (
 			'LocationPages' => 'LocationPage'
 		);
+
+		private static $default_sort = 'GgSortOrder';
 		private static $has_one = array(
 			// "GradGuideHomePage" => "GradGuideHomePage",
 		);
