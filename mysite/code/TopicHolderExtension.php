@@ -5,7 +5,6 @@
 			
 		);
 
-		private static $default_sort = 'GgSortOrder';
 		private static $has_one = array(
 		);
 
