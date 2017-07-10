@@ -51,7 +51,7 @@
 								</div>
 								<div class="medium-5 columns">
 									<% if $FeaturedImage %>
-										<img class="gg-topicpreview__image" src="$FeaturedImage.URL" alt="" role="presentation" />
+										<img class="gg-topicpreview__image dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.ScaleWidth(560).URL" alt="" role="presentation" />
 									<% end_if %>
 								</div>
 
