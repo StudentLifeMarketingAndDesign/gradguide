@@ -60,13 +60,14 @@ $Header
 						<% end_if %>
 					<% end_if %>
 					$Content
+	 				<% if $ExternalURL %>
+						<p><a href="$ExternalURL" class="button button--shaded" target="_blank">View Website &rarr;</a></p>
+					<% end_if %> 
 			        <% if $Address || $Location %>
 			          <h2>Located here:</h2>
 			          $GoogleMap
 			        <% end_if %>
- 				<% if $ExternalURL %>
-						<p><a href="$ExternalURL" class="button--shaded" target="_blank">View Website &rarr;</a></p>
-					<% end_if %> 
+
 				</div>
 				$BlockArea(AfterContentConstrained)
 				<% include TagsCategories %>

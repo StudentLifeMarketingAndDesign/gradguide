@@ -1,5 +1,5 @@
 
-<div class="header__container header__container--dark header__container--overlay header__container--no-border header__container--gg-home">
+<div class="header__container header__container--dark header__container--overlay header__container--no-border header__container--gg-home dp-lazy" data-original="{$ThemeDir}/dist/images/ggheader.jpg">
 	<div class="header__gg-screen">
 		<% include DivisionBar %>
 		<% include HeaderGradGuideHomePage %>

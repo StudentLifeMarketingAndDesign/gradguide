@@ -1,102 +1,75 @@
 
-$Header
+<div class="header__container header__container--dark header__container--overlay header__container--no-border header__container--gg-home dp-lazy" data-original="{$ThemeDir}/dist/images/ggheader.jpg">
+	<div class="header__gg-screen">
+		<% include DivisionBar %>
+		<% include HeaderGradGuideHomePage %>
+	</div>
+</div>
+<div class="nav-collapse nav-collapse--gg-home">
+	<% include Navigation %>
+</div>
+<div class="gg-home-content__container" style="clear: both;">
 
-<main class="main-content__container" id="main-content__container">
-	<!-- Background Image Feature -->
-	<% if $BackgroundImage %>
-		<% include FeaturedImage %>
-	<% end_if %>
+<div class="row">
 
-	$Breadcrumbs
+	<div class="gg-home-content large-12 columns">
+		<h2 class="text-center gg-home-content__main-header">You're here. Now what?</h2>
 
-	<% if not $BackgroundImage %>
-		<div class="column row">
-			<div class="main-content__header">
-				<h1 class="page-title">
-					<% if $ArchiveYear %>
-						<%t Blog.Archive 'Archive' %>:
-						<% if $ArchiveDay %>
-							$ArchiveDate.Nice
-						<% else_if $ArchiveMonth %>
-							$ArchiveDate.format('F, Y')
-						<% else %>
-							$ArchiveDate.format('Y')
-						<% end_if %>
-					<% else_if $CurrentTag %>
-						<%t Blog.Tag 'Tag' %>: $CurrentTag.Title
-					<% else_if $CurrentCategory %>
-						<%t Blog.Category 'Category' %>: $CurrentCategory.Title
-					<% else %>
-						$Title
-					<% end_if %>
-				</h1>
-			</div>
-		</div>
-	<% end_if %>
-
-	$BlockArea(BeforeContent)
-
-	<div class="row">
-		<div role="main" class="main-content main-content--with-padding <% if $Children || $Menu(2) || $SidebarBlocks ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
-			$BlockArea(BeforeContentConstrained)
-			<div class="main-content__text">
+		<div class="row">
+			<div class="large-8 large-offset-1 columns">
+				
 				$Content
-				<% if $SortedTopics %>
-					<% loop $SortedTopics %>
-						<article class="bloglistitem clearfix ">
-							<% if $FeaturedImage %>
-								<a href="$Link" class="bloglistitem__img border-effect">
-									<img class="dp-lazy" data-original="$FeaturedImage.CroppedImage(500,333).URL" width="500" height="333" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="$Title">
-								</a>
-							<% else_if $BackgroundImage %>
-								<a href="$Link" class="bloglistitem__img border-effect">
-									<img class="dp-lazy" data-original="$BackgroundImage.CroppedImage(500,333).URL" width="500" height="333" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="$Title">
-								</a>
-							<% else_if $YoutubeBackgroundEmbed %>
-								<a href="$Link" class="bloglistitem__img border-effect">
-									<img class="dp-lazy" data-original="http://img.youtube.com/vi/$YoutubeBackgroundEmbed/sddefault.jpg" width="500" height="333"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="$Title">
-								</a>
-							<% end_if %>
-							<div class="bloglistitem__content<% if $FeaturedImage || $BackgroundImage || $YoutubeBackgroundEmbed %>--wimage<% end_if %>">
-								<% if $Categories.exists %>
-									<p class="bloglistitem__category">
-									<% loop $Categories.Limit(3) %>
-										<a href="$Link" class="bloglistitem__category">$Title</a><% if not Last %><% else %><% end_if %>
-									<% end_loop %>
-									</p>
-								<% end_if %>
-
-								<h3 class="bloglistitem__heading"><a href="$Link">$Title</a></h3>
-
-								<% if $Summary %>
-									<div class="bloglistitem__desc">$Summary</div>
-								<% else %>
-									<p class="bloglistitem__desc">$Content.LimitCharacters(150) <%-- <a href="$Link">Continue reading</a> --%></p>
-								<% end_if %>
-
+				<% loop $SortedTopics %>
+					<div class="gg-topicpreview">
+						<a class="gg-topicpreview__link" href="$Link">
+							<div class="row">
+								<div class="medium-7 columns">
+									<h3>$Title</h3>
+									<div class="gg-topicpreview__content">
+										<% if $Summary %>
+											$Summary.NoHTML.LimitCharacters(100)
+										<% else %>
+											$Content.NoHTML.LimitCharacters(100)
+										<% end_if %>
+									</div>
+									<p><span class="keep-reading">Keep reading &rarr;</span></p>
+								</div>
+								<div class="medium-5 columns">
+									<% if $FeaturedImage %>
+										<img class="gg-topicpreview__image dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.ScaleWidth(560).URL" alt="" role="presentation" />
+									<% end_if %>
+								</div>
 
 							</div>
-						</article>
-					<% end_loop %>
-				<% end_if %>
-
-				$BlockArea(AfterContentConstrained)
-				$Form
-				$CommentsForm
-
+						</a>
+					</div>
+				<% end_loop %>
+			</div>
+			<div class="large-3 columns dp-sticky">
+			$BlockArea(Sidebar)
 			</div>
 		</div>
 
 
-		<aside class="sidebar dp-sticky">
-			<% include SideNav %>
-			<% if $SideBarView %>
-				$SideBarView
-			<% end_if %>
-			$BlockArea(Sidebar)
-		</aside>
+<%-- 		<div class="row small-up-1 large-up-2">
+			<% loop $Topics %>
+			<div class="column column-block">
+				<div class="gg-topiclist__item">
+					<h3 class="gg-topiclist__heading"><a href="$Link">$Title</a></h3>
+					$Content
+				</div>
+			</div>
+			<% end_loop %>
+		</div> --%>
+		$BlockArea(AfterContent)
+
 	</div>
 
-	$BlockArea(AfterContent)
+</div>
 
-</main>
+<%-- 
+<p class="text-center"><a href="#" class="gg-tag">Places to go</a></p> --%>
+
+
+
+</div>
