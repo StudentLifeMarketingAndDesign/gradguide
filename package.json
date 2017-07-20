@@ -3,6 +3,6 @@
   "version": "2.0.0",
   "scripts": {
     "start": "cd division-project && bower install && npm install && npm start",
-    "build": "cd division-project && bower install && npm install && npm start"
+    "build": "cd division-project && bower install && npm install && npm run-script build"
   }
 }

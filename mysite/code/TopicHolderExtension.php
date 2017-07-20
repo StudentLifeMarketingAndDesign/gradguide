@@ -26,7 +26,8 @@
 			//$conf->removeComponent('AddNew');
 			$conf->addComponent(new GridFieldSortableRows('GgSortOrder'));
 			
-
+ 			$fields->removeFieldFromTab('Root.Main', 'Content'); 
+      		$fields->addFieldToTab('Root.Topics', new HTMLEditorField('Content','Content'));
 			$fields->addFieldToTab('Root.Sorting', new GridField('Topics', 'Feature these topics in the following order', Topic::get(), $conf));
 		}
 
