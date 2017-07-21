@@ -65,9 +65,9 @@
 .nav__wrapper--gg-home{
 	margin: rem-calc(20) 0;
 }
-.nav__link--small{
+.nav__link{
 	font-size: rem-calc(14);
-	padding: rem-calc(10) rem-calc(7);
+	padding: rem-calc(10) rem-calc(10);
 
 	@include breakpoint(medium) {
 		font-size: rem-calc(15);
