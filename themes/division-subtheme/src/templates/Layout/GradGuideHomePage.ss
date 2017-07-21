@@ -60,7 +60,7 @@
 					</div>
 				<% end_loop %>
 			</div>
-			<div class="large-3 columns dp-sticky">
+			<div class="large-3 columns">
 			$BlockArea(Sidebar)
 			</div>
 		</div>
