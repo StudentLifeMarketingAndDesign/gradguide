@@ -3,14 +3,14 @@
 				<div class="nav__link nav__link--{$DarkLight} nav__link--mobile-toggle" data-toggle="offCanvas"><span class="nav__menu-icon nav__menu-icon--{$DarkLight}" id="nav__menu-icon"></span><span class="nav__menu-text nav__menu-text--{$DarkLight}" id="nav__menu-text">Menu</span></div>
 			</div>
 
-			<div class="nav__wrapper nav__wrapper--overlay nav__wrapper--{$DarkLight}" id="nav__wrapper">
+			<div class="nav__wrapper nav__wrapper--overlay nav__wrapper--{$DarkLight} nav__wrapper--gg-home" id="nav__wrapper">
 
 				<nav role="nav" class="" aria-label="Main menu">
 					
 					<ul class="nav nav--{$DarkLight} nav--no-bg clearfix" id="nav">
 						<% loop $Menu(1) %>
 						<li class="nav__item nav__item--{$Top.DarkLight} <% if $FirstLast %>nav__item--$FirstLast<% end_if %><% if $Children %> nav__item--parent<% end_if %> nav__item--{$LinkOrCurrent} nav__item--{$LinkOrSection}">
-							<a class="nav__link nav__link--{$Top.DarkLight}<% if $Children %> nav__link--parent<% end_if %>" href="$Link">$MenuTitle</a>
+							<a class="nav__link nav__link--{$Top.DarkLight}<% if $Children %> nav__link--parent<% end_if %> nav__link--small" href="$Link">$MenuTitle</a>
 							<% if $Children %>
 								<% if $Children.Count > 4 %>
 									<ul class="subnav subnav--{$Top.DarkLight} subnav--two-columns">

@@ -9,6 +9,10 @@
 	background-repeat: no-repeat;
 	position: relative;
 	min-height: rem-calc(200);
+
+	@include breakpoint(medium){
+		min-height: rem-calc(225);
+	}
 	@include breakpoint(large){
 
 		min-height: rem-calc(800);
@@ -58,7 +62,22 @@
 	height: 100%;
 	width: 100%;
 }
+.nav__wrapper--gg-home{
+	margin: rem-calc(20) 0;
+}
+.nav__link--small{
+	font-size: rem-calc(14);
+	padding: rem-calc(10) rem-calc(7);
 
+	@include breakpoint(medium) {
+		font-size: rem-calc(15);
+	}
+
+	@include breakpoint(large) {
+		font-size: rem-calc(20);
+		padding: rem-calc(20) rem-calc(30);
+	}
+}
 .nav-collapse--gg-home{
 	display: none;
 	&.open{
