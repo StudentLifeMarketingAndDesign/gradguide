@@ -201,16 +201,16 @@
         },
         {
             "name": "facebook/graph-sdk",
-            "version": "5.5.x-dev",
+            "version": "5.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facebook/php-graph-sdk.git",
-                "reference": "7af9f275dee7fde814e11fe969fa2b9776c0e496"
+                "reference": "34f5e5993c67acd264017373f23848961585dcac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facebook/php-graph-sdk/zipball/7af9f275dee7fde814e11fe969fa2b9776c0e496",
-                "reference": "7af9f275dee7fde814e11fe969fa2b9776c0e496",
+                "url": "https://api.github.com/repos/facebook/php-graph-sdk/zipball/34f5e5993c67acd264017373f23848961585dcac",
+                "reference": "34f5e5993c67acd264017373f23848961585dcac",
                 "shasum": ""
             },
             "require": {
@@ -255,7 +255,7 @@
                 "facebook",
                 "sdk"
             ],
-            "time": "2017-07-15 18:12:44"
+            "time": "2017-07-23 14:06:52"
         },
         {
             "name": "jeremeamia/SuperClosure",
@@ -464,12 +464,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "bb184327a20335e660c72c4b9c64ea7ae5a1aa9c"
+                "reference": "df5b56c42c4b54872011f143d81a88bddcfab941"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/bb184327a20335e660c72c4b9c64ea7ae5a1aa9c",
-                "reference": "bb184327a20335e660c72c4b9c64ea7ae5a1aa9c",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/df5b56c42c4b54872011f143d81a88bddcfab941",
+                "reference": "df5b56c42c4b54872011f143d81a88bddcfab941",
                 "shasum": ""
             },
             "require": {
@@ -516,7 +516,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2.0.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2017-07-21 19:53:06"
+            "time": "2017-07-26 14:06:47"
         },
         {
             "name": "md/rss-display",
@@ -702,16 +702,16 @@
         },
         {
             "name": "onelogin/php-saml",
-            "version": "2.10.7",
+            "version": "2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/onelogin/php-saml.git",
-                "reference": "b41f731803f303879f50fa76276908088197731c"
+                "reference": "818d6ee07e3797fd7e4006bff01bd2abc295cb65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/onelogin/php-saml/zipball/b41f731803f303879f50fa76276908088197731c",
-                "reference": "b41f731803f303879f50fa76276908088197731c",
+                "url": "https://api.github.com/repos/onelogin/php-saml/zipball/818d6ee07e3797fd7e4006bff01bd2abc295cb65",
+                "reference": "818d6ee07e3797fd7e4006bff01bd2abc295cb65",
                 "shasum": ""
             },
             "require": {
@@ -726,7 +726,7 @@
                 "phpunit/phpunit": "4.8",
                 "satooshi/php-coveralls": "1.0.1",
                 "sebastian/phpcpd": "*",
-                "squizlabs/php_codesniffer": "*"
+                "squizlabs/php_codesniffer": "2.9.0"
             },
             "suggest": {
                 "ext-gettext": "Install gettext and php5-gettext libs to handle translations",
@@ -752,7 +752,7 @@
                 "onelogin",
                 "saml"
             ],
-            "time": "2017-05-19T10:32:03+00:00"
+            "time": "2017-07-21T20:16:31+00:00"
         },
         {
             "name": "plato-creative/silverstripe-typekit",
@@ -1896,12 +1896,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplepie/simplepie.git",
-                "reference": "a936296cd81d7ca1eec41ac6217e21e6a1afb887"
+                "reference": "dcee45d8c41473753eb5da67208247fe0e0671f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplepie/simplepie/zipball/a936296cd81d7ca1eec41ac6217e21e6a1afb887",
-                "reference": "a936296cd81d7ca1eec41ac6217e21e6a1afb887",
+                "url": "https://api.github.com/repos/simplepie/simplepie/zipball/dcee45d8c41473753eb5da67208247fe0e0671f9",
+                "reference": "dcee45d8c41473753eb5da67208247fe0e0671f9",
                 "shasum": ""
             },
             "require": {
@@ -1948,7 +1948,7 @@
                 "feeds",
                 "rss"
             ],
-            "time": "2017-06-15 01:05:26"
+            "time": "2017-07-26 04:54:36"
         },
         {
             "name": "symbiote/silverstripe-addressable",
