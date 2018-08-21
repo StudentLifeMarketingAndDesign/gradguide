@@ -259,12 +259,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/facebook/php-graph-sdk.git",
-                "reference": "6d1eb5a3861624cd0ff40c67e517de891d78134a"
+                "reference": "3138249d85e8dc040f15bedd3581a3c616f49005"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facebook/php-graph-sdk/zipball/6d1eb5a3861624cd0ff40c67e517de891d78134a",
-                "reference": "6d1eb5a3861624cd0ff40c67e517de891d78134a",
+                "url": "https://api.github.com/repos/facebook/php-graph-sdk/zipball/3138249d85e8dc040f15bedd3581a3c616f49005",
+                "reference": "3138249d85e8dc040f15bedd3581a3c616f49005",
                 "shasum": ""
             },
             "require": {
@@ -309,7 +309,7 @@
                 "facebook",
                 "sdk"
             ],
-            "time": "2018-02-25T19:55:53+00:00"
+            "time": "2018-07-06T17:58:28+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -317,12 +317,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "572593ad627db27b10e887527da24b9a97bb0fee"
+                "reference": "5c7a5c524e556113e7f8685e6880cbc4090c798d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/572593ad627db27b10e887527da24b9a97bb0fee",
-                "reference": "572593ad627db27b10e887527da24b9a97bb0fee",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/5c7a5c524e556113e7f8685e6880cbc4090c798d",
+                "reference": "5c7a5c524e556113e7f8685e6880cbc4090c798d",
                 "shasum": ""
             },
             "require": {
@@ -374,7 +374,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2018-07-31T13:28:13+00:00"
+            "time": "2018-08-08T04:37:00+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -872,12 +872,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "bda15cbe91598d1aef2c0b49f177347143862674"
+                "reference": "696fe37296ac3efcbc22b49db01beb9bdadd3e07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/bda15cbe91598d1aef2c0b49f177347143862674",
-                "reference": "bda15cbe91598d1aef2c0b49f177347143862674",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/696fe37296ac3efcbc22b49db01beb9bdadd3e07",
+                "reference": "696fe37296ac3efcbc22b49db01beb9bdadd3e07",
                 "shasum": ""
             },
             "require": {
@@ -896,7 +896,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2018-07-31T21:38:40+00:00"
+            "time": "2018-08-20T19:21:32+00:00"
         },
         {
             "name": "md/blog",
@@ -986,12 +986,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "a6247be4e0181d1e680217cd0312900056ecba99"
+                "reference": "ed8914207b373a722da1f8ada607ce373c43d519"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/a6247be4e0181d1e680217cd0312900056ecba99",
-                "reference": "a6247be4e0181d1e680217cd0312900056ecba99",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/ed8914207b373a722da1f8ada607ce373c43d519",
+                "reference": "ed8914207b373a722da1f8ada607ce373c43d519",
                 "shasum": ""
             },
             "require": {
@@ -1045,7 +1045,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2.0.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2018-07-31T21:49:00+00:00"
+            "time": "2018-08-20T14:55:15+00:00"
         },
         {
             "name": "md/rss-display",
@@ -2481,7 +2481,7 @@
                 "shasum": ""
             },
             "require": {
-                "silverstripe/framework": "~3.1"
+                "silverstripe/framework": "^3.3"
             },
             "suggest": {
                 "silverstripe/cms": "Allows you to easily edit file permissions in the CMS"
@@ -2874,12 +2874,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplepie/simplepie.git",
-                "reference": "09b8839882bf6e41eb683cea1728defc0534f117"
+                "reference": "0e8fe72132dad765d25db4cabc69a91139af1263"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplepie/simplepie/zipball/09b8839882bf6e41eb683cea1728defc0534f117",
-                "reference": "09b8839882bf6e41eb683cea1728defc0534f117",
+                "url": "https://api.github.com/repos/simplepie/simplepie/zipball/0e8fe72132dad765d25db4cabc69a91139af1263",
+                "reference": "0e8fe72132dad765d25db4cabc69a91139af1263",
                 "shasum": ""
             },
             "require": {
@@ -2933,7 +2933,7 @@
                 "feeds",
                 "rss"
             ],
-            "time": "2018-07-26T01:04:22+00:00"
+            "time": "2018-08-02T05:43:58+00:00"
         },
         {
             "name": "symbiote/silverstripe-addressable",
