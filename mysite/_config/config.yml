@@ -1,4 +1,12 @@
-BlogTag:
+---
+Name: myproject
+---
+SilverStripe\Core\Manifest\ModuleManifest:
+  project: mysite
+SilverStripe\Blog\Model\BlogPost:
+  extensions:
+    - GgBlogPostExtension
+SilverStripe\Blog\Model\BlogTag:
   extensions:
     - GgBlogTagExtension
 Topic:
@@ -9,5 +17,5 @@ TopicHolder:
     - TopicHolderExtension
 LocationPage:
   extensions:
-    - Addressable
-    - Geocodable
+    - Symbiote\Addressable\Addressable
+    - Symbiote\Addressable\Geocodable

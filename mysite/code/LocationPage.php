@@ -1,4 +1,8 @@
 <?php
+
+use SilverStripe\Core\Config\Config;
+use SilverStripe\Blog\Model\BlogPost;
+use SilverStripe\Forms\TextField;
 class LocationPage extends BlogPost {
 
 	private static $db = array(
@@ -42,7 +46,7 @@ class LocationPage extends BlogPost {
 		$f->removeByName('PhotosByEmail');
 		$f->renameField('Suburb', 'City');
 		$f->renameField('Postcode', 'ZIP Code');
-		$f->renameField('ExternalURL', 'Location\'s website');
+		$f->addFieldToTab('Root.Main', new TextField('WebsiteURL', 'Location\'s website'), 'Content');
 		$f->renameField('IsFeatured', 'Feature this location near the top of the page?');
 
 		// $f->addFieldToTab('Root.Main', new UploadField('Image', 'Image'), 'Content');
@@ -90,30 +94,4 @@ class LocationPage extends BlogPost {
 		));
 		return $data->renderWith('TopicGoogleMap');
 	}
-}
-
-class LocationPage_Controller extends BlogPost_Controller {
-
-	/**
-	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
-	 * permissions or conditions required to allow the user to access it.
-	 *
-	 * <code>
-	 * array (
-	 *     'action', // anyone can access this action
-	 *     'action' => true, // same as above
-	 *     'action' => 'ADMIN', // you must have ADMIN permissions to access this action
-	 *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
-	 * );
-	 * </code>
-	 *
-	 * @var array
-	 */
-	// private static $allowed_actions = array(
-	// );
-
-	public function init() {
-		parent::init();
-	}
-
 }

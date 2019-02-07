@@ -17,13 +17,13 @@ $Header
       </div>
       <% if $FeaturedImage %>
         <% if FeaturedImage.Width >= 1200 %>
-          <p class="post-image"><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.CroppedFocusedImage(1200,700).URL" width="1200" height="700" alt="" role="presentation" /></p>
+          <p class="post-image"><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.FocusFill(1200,700).URL" width="1200" height="700" alt="" role="presentation" /></p>
         <% end_if %>
       <% end_if %>
     </div>
   <% end_if %>
 
-  $BlockArea(BeforeContent)
+  $BeforeContent
 
   <div class="row">
 
@@ -34,7 +34,7 @@ $Header
         <div class="blogmeta clearfix">
           <div class="blogmeta__byline clearfix">
           <p>
-            <% loop $Categories.Limit(1) %><a href="$Link" class="topic-single__byline-cat">$Title</a><% end_loop %>
+            <% loop $Categories.First %><a href="$Link" class="topic-single__byline-cat">$Title</a><% end_loop %>
           </p>
           </div>
           <ul class="blogmeta__social">
@@ -45,7 +45,7 @@ $Header
           </ul>
         </div>
 
-        
+
         $Content
         <% if $Address || $Location %>
           <h2>Located here:</h2>
@@ -62,11 +62,11 @@ $Header
        <%--  <% include TagsCategories %> --%>
 
       </div>
-      
+
       <% include TopicRelated %>
-      
-      
-      $BlockArea(AfterContentConstrained)
+
+
+      $AfterContentConstrained
       $Form
 
     </article>
@@ -75,10 +75,10 @@ $Header
       <% if $SideBarView %>
         $SideBarView
       <% end_if %>
-      $BlockArea(Sidebar)
+      $SidebarArea
     </aside>
   </div>
-  $BlockArea(AfterContent)
+  $AfterContent
 
 </main>
 <% if $LocationPages %>

@@ -1,5 +1,10 @@
 <?php
 
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\TextField;
+use SilverStripe\TagField\TagField;
+use SilverStripe\ORM\DataExtension;
+
 	class TopicExtension extends DataExtension{
 		private static $db = array(
 			'GgSortOrder' => 'Int'
@@ -22,6 +27,8 @@
 
 			// $fields->addFieldToTab('Root.Main', $locationGridField);
 
+        $fields->addFieldToTab('Root.Main', TextField::create('ExternalURL'));
+
 		$lField = TagField::create(
 						'LocationPages',
 						'Locations relevant to this topic:',
@@ -29,7 +36,9 @@
 						$this->owner->LocationPages()
 					)->setShouldLazyLoad(true)->setCanCreate(false);
 
-		$fields->addFieldToTab('blog-admin-sidebar', $lField);
+		$fields->addFieldToTab('Root.Main', $lField);
+
+
 		}
 
 

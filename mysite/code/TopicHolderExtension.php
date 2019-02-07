@@ -1,12 +1,20 @@
 <?php
 
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordViewer;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\ORM\DataExtension;
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 	class TopicHolderExtension extends DataExtension{
 		private static $db = array(
-			
+
 		);
 
 		private static $has_one = array(
 		);
+
+        private static $header_type = 'dark-header';
 
 		public function SortedTopics(){
 			$topics = Topic::get()->filter(array('ParentID' => $this->owner->ID))->sort('GgSortOrder');
@@ -25,8 +33,8 @@
 			$conf=GridFieldConfig_RecordViewer::create(20);
 			//$conf->removeComponent('AddNew');
 			$conf->addComponent(new GridFieldSortableRows('GgSortOrder'));
-			
- 			$fields->removeFieldFromTab('Root.Main', 'Content'); 
+
+ 			$fields->removeFieldFromTab('Root.Main', 'Content');
       		$fields->addFieldToTab('Root.Topics', new HTMLEditorField('Content','Content'));
 			$fields->addFieldToTab('Root.Sorting', new GridField('Topics', 'Feature these topics in the following order', Topic::get(), $conf));
 		}

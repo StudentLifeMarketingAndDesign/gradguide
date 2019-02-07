@@ -7,7 +7,7 @@
     <header>
       <h1 class="headline">$Title</h1>
       <% if $FeaturedImage %>
-        <amp-img src="$FeaturedImage.CroppedFocusedImage(1024,682).AbsoluteURL" width="1024" height="682" layout="responsive"></amp-img></p>
+        <amp-img src="$FeaturedImage.FocusFill(1024,682).AbsoluteURL" width="1024" height="682" layout="responsive"></amp-img></p>
       <% end_if %>
     </header>
 
