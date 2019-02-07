@@ -17,8 +17,9 @@
 
 		<div class="row">
 			<div class="large-8 large-offset-1 columns">
-				
+
 				$Content
+
 				<% loop $SortedTopics %>
 					<div class="gg-topicpreview">
 						<a class="gg-topicpreview__link" href="$Link">
@@ -46,7 +47,7 @@
 				<% end_loop %>
 			</div>
 			<div class="large-3 columns">
-			$BlockArea(Sidebar)
+			$SidebarArea
 			</div>
 		</div>
 
@@ -61,13 +62,13 @@
 			</div>
 			<% end_loop %>
 		</div> --%>
-		$BlockArea(AfterContent)
+		$AfterContent
 
 	</div>
 
 </div>
 
-<%-- 
+<%--
 <p class="text-center"><a href="#" class="gg-tag">Places to go</a></p> --%>
 
 

@@ -6,7 +6,7 @@
 			<div class="nav__wrapper nav__wrapper--overlay nav__wrapper--{$DarkLight} nav__wrapper--gg-home" id="nav__wrapper">
 
 				<nav role="nav" class="" aria-label="Main menu">
-					
+
 					<ul class="nav nav--{$DarkLight} nav--no-bg clearfix" id="nav">
 						<% loop $Menu(1) %>
 						<li class="nav__item nav__item--{$Top.DarkLight} <% if $FirstLast %>nav__item--$FirstLast<% end_if %><% if $Children %> nav__item--parent<% end_if %> nav__item--{$LinkOrCurrent} nav__item--{$LinkOrSection}">
