@@ -6,7 +6,7 @@
         "php": ">=5.6.0",
         "md/division-project": "dev-ss4.x",
         "silverstripe/mathspamprotection": "dev-master",
-        "symbiote/silverstripe-addressable":"*"
+        "symbiote/silverstripe-addressable": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7"
