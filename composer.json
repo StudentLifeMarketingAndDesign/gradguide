@@ -4,7 +4,7 @@
     "description": "The SilverStripe Framework Installer",
     "require": {
         "php": ">=5.6.0",
-        "md/division-project": "dev-ss4.x",
+        "md/division-project": "2.*",
         "silverstripe/mathspamprotection": "dev-master",
         "symbiote/silverstripe-addressable": "*"
     },
