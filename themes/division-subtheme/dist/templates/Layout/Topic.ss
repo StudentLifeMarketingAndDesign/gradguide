@@ -31,19 +31,21 @@ $Header
       $BlockArea(BeforeContentConstrained)
       <div class="main-content__text">
       <div class="content">
-        <div class="blogmeta clearfix">
-          <div class="blogmeta__byline clearfix">
-          <p>
-            <% loop $Categories.First %><a href="$Link" class="topic-single__byline-cat">$Title</a><% end_loop %>
-          </p>
-          </div>
-          <ul class="blogmeta__social">
-            <li><a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);"  title="Share on Facebook"><img src="{$ThemeDir}/dist/images/icon_facebook.png" alt="Share on Facebook"></a>
-            </li>
-            <li><a href="https://twitter.com/intent/tweet?text=$AbsoluteLink" title="Share on Twitter" target="_blank"><img src="{$ThemeDir}/dist/images/icon_twitter.png" alt="Share on Twitter"></a></li>
-            <li><a href="javascript:window.open('https://www.linkedin.com/cws/share?url=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);" title="Share on LinkedIn" target="_blank"><img src="{$ThemeDir}/dist/images/icon_linkedin.png" alt="share on linkedid"></a></li>
-          </ul>
-        </div>
+            <div class="blogmeta">
+                <% if $Parent.ShowLastUpdated && $LastEdited.TimeDiff < 604800 %>
+                <div class="byline"><p>  <em class="byline__on">Updated on: $LastEdited.format("MMMM d, y")</em>
+                  <% if $Categories.Count == 1 %><br />
+                      <% loop $Categories.Limit(1) %>Filed under: <a href="$Link" class="topic-single__byline-cat">$Title</a><% end_loop %>
+                  </p><% end_if %>
+                </div>
+                <% end_if %>
+                <ul class="social-icons">
+                    <li><a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);"  title="Share on Facebook"><img src="{$ThemeDir}/dist/images/icon_facebook.png" alt="Share on Facebook"></a>
+                    </li>
+                    <li><a href="https://twitter.com/intent/tweet?text=$AbsoluteLink" title="Share on Twitter" target="_blank"><img src="{$ThemeDir}/dist/images/icon_twitter.png" alt="Share on Twitter"></a></li>
+                    <li><a href="javascript:window.open('https://www.linkedin.com/cws/share?url=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);" title="Share on LinkedIn" target="_blank"><img src="{$ThemeDir}/dist/images/icon_linkedin.png" alt="share on linkedid"></a></li>
+                </ul>
+            </div>
 
 
         $Content
