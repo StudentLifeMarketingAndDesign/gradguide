@@ -1,43 +1,28 @@
+
 $Header
 <main class="main-content__container" id="main-content__container">
+    <% if $BackgroundImage %>
+        <% include FeaturedImage %>
+    <% end_if %>
 
-  <!-- Background Image Feature -->
-  <% if $BackgroundImage %>
-    <% include FeaturedImage %>
-  <% end_if %>
-  $Breadcrumbs
+    <% if $YoutubeBackgroundEmbed %>
+        <div class="backgroundvideo">
+            <div id="ESEE" class="backgroundvideo__container" data-interchange="[http://img.youtube.com/vi/$YoutubeBackgroundEmbed/sddefault.jpg, small], [http://img.youtube.com/vi/$YoutubeBackgroundEmbed/maxresdefault.jpg, large]">
+                <a href="http://www.youtube.com/embed/$YoutubeBackgroundEmbed" data-video="$YoutubeBackgroundEmbed" class="backgroundvideo__link">
+                </a>
+            </div>
+        </div>
+    <% end_if %>
 
-  <% if not $BackgroundImage %>
     <div class="column row">
-      <div class="main-content__header">
-        <h1>$Title</h1>
-        <% if $Summary %>
-          <div class="blogpost__summary">$Summary</div>
-        <% end_if %>
-      </div>
-      <% if $FeaturedImage %>
-        <% if FeaturedImage.Width >= 1200 %>
-          <p class="post-image"><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.FocusFill(1200,700).URL" width="1200" height="700" alt="" role="presentation" /></p>
-        <% end_if %>
-      <% end_if %>
-    </div>
-  <% end_if %>
-
-  $BeforeContent
-
-  <div class="row">
-
-    <article role="main" class="main-content main-content--with-padding <% if $Children || $Menu(2) || $SidebarBlocks ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
-      $BlockArea(BeforeContentConstrained)
-      <div class="main-content__text">
-      <div class="content">
+        <div class="main-content__header">
+            <% if not $BackgroundImage %>
+                $Breadcrumbs
+                <h1>$Title</h1>
+            <% end_if %>
             <div class="blogmeta">
-                <% if $Parent.ShowLastUpdated && $LastEdited.TimeDiff < 604800 %>
-                <div class="byline"><p>  <em class="byline__on">Updated on: $LastEdited.format("MMMM d, y")</em>
-                  <% if $Categories.Count == 1 %><br />
-                      <% loop $Categories.Limit(1) %>Filed under: <a href="$Link" class="topic-single__byline-cat">$Title</a><% end_loop %>
-                  </p><% end_if %>
-                </div>
+                <% if not $Parent.HideDatesAndAuthors %>
+                    <% include ByLine %>
                 <% end_if %>
                 <ul class="social-icons">
                     <li><a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);"  title="Share on Facebook"><img src="{$ThemeDir}/dist/images/icon_facebook.png" alt="Share on Facebook"></a>
@@ -46,9 +31,20 @@ $Header
                     <li><a href="javascript:window.open('https://www.linkedin.com/cws/share?url=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);" title="Share on LinkedIn" target="_blank"><img src="{$ThemeDir}/dist/images/icon_linkedin.png" alt="share on linkedid"></a></li>
                 </ul>
             </div>
+        </div>
+    </div>
 
 
-        $Content
+    $BeforeContent
+
+    <div class="row">
+        <article role="main" class="main-content main-content--with-padding <% if $Children || $Menu(2) || $SidebarArea.Elements ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
+            $BeforeContentConstrained
+            <div class="main-content__text">
+                <% if $FeaturedImage %>
+                    <p><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.ScaleWidth(860).URL" <% if $FeaturedImageAltText %> alt="$FeaturedImageAltText" <% else %> alt="" role="presentation" <% end_if %>width="840" height="$FeaturedImage.ScaleWidth(860).Height" /></p>
+                <% end_if %>
+                $Content
         <% if $Address || $Location %>
           <h2>Located here:</h2>
           $GoogleMap
@@ -61,28 +57,30 @@ $Header
           <% end_loop %>
           </ul>
         <% end_if %>
-       <%--  <% include TagsCategories %> --%>
+                <% if $ExternalURL %>
+                    <p><a href="$ExternalURL" class="button--shaded" target="_blank">$ExternalURLText</a></p>
+                <% end_if %>
+                $AfterContentConstrained
+            </div>
+            <% include TagsCategories %>
+            $Form
+            <% include TopicRelated %>
+        </article>
+        <% if $Children || $Menu(2) || $SidebarArea.Elements ||  $SidebarView.Widgets %>
+            <aside class="sidebar dp-sticky">
+                <% include SideNav %>
+                <% if $SideBarView %>
+                    $SideBarView
+                <% end_if %>
+                $SidebarArea
+            </aside>
+        <% end_if %>
+    </div>
+    $AfterContent
 
-      </div>
-
-      <% include TopicRelated %>
-
-
-      $AfterContentConstrained
-      $Form
-
-    </article>
-    <aside class="sidebar dp-sticky">
-      <% include SideNav %>
-      <% if $SideBarView %>
-        $SideBarView
-      <% end_if %>
-      $SidebarArea
-    </aside>
-  </div>
-  $AfterContent
 
 </main>
+
 <% if $LocationPages %>
 <div class="block_area block_area_aftercontent">
   <section class="content-block__container recentnews" aria-labelledby="RelatedNewsSection">
@@ -103,3 +101,5 @@ $Header
   </section>
 </div>
 <% end_if %>
+
+
