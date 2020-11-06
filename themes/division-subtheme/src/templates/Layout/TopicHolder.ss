@@ -1,76 +1,47 @@
 
-<div class="header__container header__container--dark header__container--overlay header__container--no-border header__container--gg-home dp-lazy" data-original="{$ThemeDir}/dist/images/ggheader.jpg">
-	<div class="header__gg-screen">
-		<% include DivisionBar %>
-		<% include HeaderGradGuideHomePage %>
-	</div>
+$Header
+
+
+<div class="hero hero--content hero--center">
+    <div class="hero__imgwrap hero__imgwrap--medium hero__imgwrap--image" style="background-image:url({$ThemeDir}/dist/images/ggheader.jpg); background-position: 50% 50%;">
+    </div>
+
+
+        <div class="hero__contentwrap grid-container">
+            <div class="hero__content">
+
+                    <h2>You're Here. Now what?</h2>
+
+<a href="#resources" class="button">University Resources <i class="fas fa-arrow-right"></i></a>
+                    <a href="event-calendar/" class="button">Find things to do <i class="fas fa-arrow-right"></i></a>
+
+
+                    <a href="dining-entertainment-nightlife/" class="button">Popular places &amp; nightlife <i class="fas fa-arrow-right"></i></a>
+
+
+            </div>
+        </div>
+
 </div>
-<div class="nav-collapse nav-collapse--gg-home">
-	<% include Navigation %>
-</div>
-<div class="gg-home-content__container" style="clear: both;">
+
+
+$BeforeContent
 
 <div class="row">
+    <div class="large-8 columns large-centered" style="padding-top: 40px;">
 
-	<div class="gg-home-content large-12 columns">
-		<h2 class="text-center gg-home-content__main-header">You're here. Now what?</h2>
-
-		<div class="row">
-			<div class="large-8 large-offset-1 columns">
-
-				$Content
-
-				<% loop $SortedTopics %>
-					<div class="gg-topicpreview">
-						<a class="gg-topicpreview__link" href="$Link">
-							<div class="row">
-								<div class="medium-7 columns">
-									<h3>$Title</h3>
-									<div class="gg-topicpreview__content">
-										<% if $Summary %>
-											$Summary.NoHTML.LimitCharacters(100)
-										<% else %>
-											$Content.NoHTML.LimitCharacters(100)
-										<% end_if %>
-									</div>
-									<p><span class="keep-reading">Keep reading &rarr;</span></p>
-								</div>
-								<div class="medium-5 columns">
-									<% if $FeaturedImage %>
-										<img class="gg-topicpreview__image dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.ScaleWidth(560).URL" alt="" role="presentation" />
-									<% end_if %>
-								</div>
-
-							</div>
-						</a>
-					</div>
-				<% end_loop %>
-			</div>
-			<div class="large-3 columns">
-			$SidebarArea
-			</div>
-		</div>
-
-
-<%-- 		<div class="row small-up-1 large-up-2">
-			<% loop $Topics %>
-			<div class="column column-block">
-				<div class="gg-topiclist__item">
-					<h3 class="gg-topiclist__heading"><a href="$Link">$Title</a></h3>
-					$Content
-				</div>
-			</div>
-			<% end_loop %>
-		</div> --%>
-		$AfterContent
-
-	</div>
+                $Content
+                <div id="resources">
+                <% loop $SortedTopics %>
+                   <% include BlogCardHorizontal %>
+                <% end_loop %>
+            </div>
+    </div>
 
 </div>
 
-<%--
-<p class="text-center"><a href="#" class="gg-tag">Places to go</a></p> --%>
 
 
+$AfterContent
 
-</div>
+
