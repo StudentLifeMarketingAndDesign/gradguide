@@ -4,7 +4,7 @@
     "description": "The SilverStripe Framework Installer",
     "require": {
         "php": ">=5.6.0",
-        "md/division-project": "2.*",
+        "md/division-project": "3.*",
         "silverstripe/mathspamprotection": "dev-master",
         "symbiote/silverstripe-addressable": "*"
     },
@@ -42,43 +42,38 @@
             "themes/division-subtheme/css"
         ]
     },
-    "repositories": {
-        "0": {
+    "repositories": [
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-project"
         },
-        "1": {
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
         },
-        "2": {
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-maintenance-mode"
         },
-        "3": {
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar"
         },
-        "4": {
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events"
         },
-        "5": {
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-flickr"
         },
-        "6": {
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
-        },
-        "repo-name": {
-            "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/deploy-helper"
         }
-    },
+    ],
     "config": {
         "process-timeout": 600
     },
-    "prefer-stable": true,
     "minimum-stability": "dev"
 }
