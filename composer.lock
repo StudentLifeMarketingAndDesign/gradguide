@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbbe44fb096f21ab9a0d7267204078fe",
+    "content-hash": "dadb798629a0a03d9fc1c674210036a5",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -304,12 +304,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "260a3b3c67adbb8a3f895a49755e9a6e6b9fd8ee"
+                "reference": "0f4a400e1c678d2650c5c27cce9e534cc3305c2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/260a3b3c67adbb8a3f895a49755e9a6e6b9fd8ee",
-                "reference": "260a3b3c67adbb8a3f895a49755e9a6e6b9fd8ee",
+                "url": "https://api.github.com/repos/composer/installers/zipball/0f4a400e1c678d2650c5c27cce9e534cc3305c2a",
+                "reference": "0f4a400e1c678d2650c5c27cce9e534cc3305c2a",
                 "shasum": ""
             },
             "require": {
@@ -447,7 +447,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-03-23T06:47:48+00:00"
+            "time": "2021-04-05T08:39:13+00:00"
         },
         {
             "name": "dnadesign/silverstripe-elemental",
@@ -578,12 +578,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "99f6d95aebd94251573e4f4febf14bc6aba28697"
+                "reference": "5028323230da075d6f515448fe62dfb179b9bde8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/99f6d95aebd94251573e4f4febf14bc6aba28697",
-                "reference": "99f6d95aebd94251573e4f4febf14bc6aba28697",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/5028323230da075d6f515448fe62dfb179b9bde8",
+                "reference": "5028323230da075d6f515448fe62dfb179b9bde8",
                 "shasum": ""
             },
             "require": {
@@ -629,7 +629,7 @@
                 "issues": "https://github.com/oscarotero/Embed/issues",
                 "source": "https://github.com/oscarotero/Embed/tree/v3.x"
             },
-            "time": "2020-12-24T09:42:20+00:00"
+            "time": "2021-04-02T10:59:24+00:00"
         },
         {
             "name": "gorriecoe/silverstripe-webfonts",
@@ -1440,12 +1440,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "878393d083d94ca3f4ffe0a0ad7671f63b2cf92d"
+                "reference": "33a53ea39175428b5156ba26cc41bfdcb9dded6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/878393d083d94ca3f4ffe0a0ad7671f63b2cf92d",
-                "reference": "878393d083d94ca3f4ffe0a0ad7671f63b2cf92d",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/33a53ea39175428b5156ba26cc41bfdcb9dded6d",
+                "reference": "33a53ea39175428b5156ba26cc41bfdcb9dded6d",
                 "shasum": ""
             },
             "require": {
@@ -1460,6 +1460,7 @@
                 "md/division-analytics": "1.3.x",
                 "md/saml": "dev-md",
                 "md/silverstripe-maintenance-mode": "dev-master",
+                "md/silverstripe-migration-tools": "dev-main",
                 "md/uiowa-bar": "2.*",
                 "paquettg/php-html-parser": "^2.2",
                 "php": ">=5.5",
@@ -1494,7 +1495,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/3",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2021-02-26T21:52:06+00:00"
+            "time": "2021-04-05T14:13:04+00:00"
         },
         {
             "name": "md/saml",
@@ -1628,6 +1629,34 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-maintenance-mode/tree/master"
             },
             "time": "2020-03-30T21:44:08+00:00"
+        },
+        {
+            "name": "md/silverstripe-migration-tools",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-migration-tools.git",
+                "reference": "096bd4707f7ae63aee0ca7914560e0bb7d7525ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-migration-tools/zipball/096bd4707f7ae63aee0ca7914560e0bb7d7525ba",
+                "reference": "096bd4707f7ae63aee0ca7914560e0bb7d7525ba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "silverstripe/cms": "4.*",
+                "silverstripe/framework": "4.*"
+            },
+            "default-branch": true,
+            "type": "silverstripe-vendormodule",
+            "description": "Exports SilverStripe content to WordPress eXtended RSS",
+            "support": {
+                "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-migration-tools/tree/main",
+                "issues": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-migration-tools/issues"
+            },
+            "time": "2021-04-07T16:08:44+00:00"
         },
         {
             "name": "md/uiowa-bar",
@@ -3137,12 +3166,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-mathspamprotection.git",
-                "reference": "570eec324c89578f299e2340681b74edb7b3c712"
+                "reference": "5dbb469c4cdc1ff261d4ce058407536256d388d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-mathspamprotection/zipball/570eec324c89578f299e2340681b74edb7b3c712",
-                "reference": "570eec324c89578f299e2340681b74edb7b3c712",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-mathspamprotection/zipball/5dbb469c4cdc1ff261d4ce058407536256d388d4",
+                "reference": "5dbb469c4cdc1ff261d4ce058407536256d388d4",
                 "shasum": ""
             },
             "require": {
@@ -3157,7 +3186,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "SilverStripe\\MathSpamProtection\\": "code/"
+                    "SilverStripe\\MathSpamProtection\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3180,7 +3209,7 @@
                 "issues": "https://github.com/silverstripe/silverstripe-mathspamprotection/issues",
                 "source": "https://github.com/silverstripe/silverstripe-mathspamprotection/tree/master"
             },
-            "time": "2018-06-28T21:15:27+00:00"
+            "time": "2021-03-31T19:59:18+00:00"
         },
         {
             "name": "silverstripe/mimevalidator",
@@ -3511,12 +3540,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-sharedraftcontent.git",
-                "reference": "36389f3ce872522df71f08b6245f341222310b51"
+                "reference": "f8772084b97a2be9e70a53df279c029e5131b8e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-sharedraftcontent/zipball/36389f3ce872522df71f08b6245f341222310b51",
-                "reference": "36389f3ce872522df71f08b6245f341222310b51",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-sharedraftcontent/zipball/f8772084b97a2be9e70a53df279c029e5131b8e0",
+                "reference": "f8772084b97a2be9e70a53df279c029e5131b8e0",
                 "shasum": ""
             },
             "require": {
@@ -3568,7 +3597,7 @@
                 "issues": "https://github.com/silverstripe/silverstripe-sharedraftcontent/issues",
                 "source": "https://github.com/silverstripe/silverstripe-sharedraftcontent/tree/2"
             },
-            "time": "2021-03-22T03:32:26+00:00"
+            "time": "2021-04-07T00:31:03+00:00"
         },
         {
             "name": "silverstripe/siteconfig",
@@ -3748,12 +3777,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-userforms.git",
-                "reference": "a617be30fe5bd0a0c8c881e14c8aead978436d0a"
+                "reference": "540bfbd7434414231eba815b7de795e55d19aa28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/a617be30fe5bd0a0c8c881e14c8aead978436d0a",
-                "reference": "a617be30fe5bd0a0c8c881e14c8aead978436d0a",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/540bfbd7434414231eba815b7de795e55d19aa28",
+                "reference": "540bfbd7434414231eba815b7de795e55d19aa28",
                 "shasum": ""
             },
             "require": {
@@ -3823,7 +3852,7 @@
                 "issues": "https://github.com/silverstripe/silverstripe-userforms/issues",
                 "source": "https://github.com/silverstripe/silverstripe-userforms/tree/5"
             },
-            "time": "2021-03-11T01:00:06+00:00"
+            "time": "2021-04-05T09:19:14+00:00"
         },
         {
             "name": "silverstripe/vendor-plugin",
@@ -4429,12 +4458,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "3225cf0e92ae3a45bcd502b0a6b971575f42a9bb"
+                "reference": "f0f06656a18304cdeacb2c4c0113a2b78a2b4c2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/3225cf0e92ae3a45bcd502b0a6b971575f42a9bb",
-                "reference": "3225cf0e92ae3a45bcd502b0a6b971575f42a9bb",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/f0f06656a18304cdeacb2c4c0113a2b78a2b4c2a",
+                "reference": "f0f06656a18304cdeacb2c4c0113a2b78a2b4c2a",
                 "shasum": ""
             },
             "require": {
@@ -4483,7 +4512,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-03-23T20:55:00+00:00"
+            "time": "2021-04-01T10:24:12+00:00"
         },
         {
             "name": "symfony/finder",
@@ -5412,16 +5441,16 @@
         },
         {
             "name": "webonyx/graphql-php",
-            "version": "0.12.x-dev",
+            "version": "v0.12.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webonyx/graphql-php.git",
-                "reference": "7d7b693a41a9521025924b473c3e5d63eb018ec6"
+                "reference": "4c545e5ec4fc37f6eb36c19f5a0e7feaf5979c95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/7d7b693a41a9521025924b473c3e5d63eb018ec6",
-                "reference": "7d7b693a41a9521025924b473c3e5d63eb018ec6",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/4c545e5ec4fc37f6eb36c19f5a0e7feaf5979c95",
+                "reference": "4c545e5ec4fc37f6eb36c19f5a0e7feaf5979c95",
                 "shasum": ""
             },
             "require": {
@@ -5457,7 +5486,7 @@
                 "issues": "https://github.com/webonyx/graphql-php/issues",
                 "source": "https://github.com/webonyx/graphql-php/tree/0.12.x"
             },
-            "time": "2018-11-21T08:07:05+00:00"
+            "time": "2018-09-02T14:59:54+00:00"
         },
         {
             "name": "zendframework/zend-authentication",
